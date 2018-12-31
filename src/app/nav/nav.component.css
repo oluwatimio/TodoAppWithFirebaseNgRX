@@ -1,0 +1,23 @@
+mat-toolbar{
+  background-color:#D4262F;
+  color: white;
+}
+
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.material-icons{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  margin-right: 2vh
+}
+
+#iconD{
+  position: relative;
+  top: 0px;
+  left: 5px;
+  margin-right: 2vh
+}
+

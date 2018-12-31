@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <form class="example-form">
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Todo" [value]="todoName"
+               (input) = "todoName = $event.target.value">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Description"[value]="todoDescription"
+                  (input) = "todoDescription = $event.target.value"></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+  <div fxLayoutAlign="center center">
+    <button mat-raised-button style="background-color: red; color: white" (click)="submitTodo()">ADD</button>
+  </div>
+</div>

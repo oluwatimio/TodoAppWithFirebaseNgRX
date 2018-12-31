@@ -1,0 +1,30 @@
+<p style="font-family: Roboto; font-size: 20px">Click a task to complete or uncomplete it</p>
+<mat-selection-list #incomplete (selectionChange)="toggle(incomplete, $event)">
+  <p style="font-family: Roboto; font-size: 20px">Incomplete Tasks</p>
+  <div *ngFor="let todo of todos | async">
+    <div *ngIf="todo.isCompleted === false && todo.uid === uid">
+      <mat-list-option [value]="todo">
+        <h3 mat-line>{{todo.todoName}}</h3>
+        <h3 mat-line>{{todo.descriptionOfTodo}}</h3>
+      </mat-list-option>
+    </div>
+  </div>
+</mat-selection-list>
+
+<mat-selection-list #complete (selectionChange)="toggleComplete(complete, $event)">
+<p style="font-family: Roboto; font-size: 20px">Complete Tasks</p>
+<div *ngFor="let todo of todos | async">
+  <div *ngIf="todo.isCompleted === true && todo.uid == uid">
+    <mat-list-option [value]="todo">
+      <h3 mat-line>{{todo.todoName}}</h3>
+      <h3 mat-line>{{todo.descriptionOfTodo}}</h3>
+    </mat-list-option>
+  </div>
+</div>
+</mat-selection-list>
+<!--<p>-->
+  <!--Options selected: {{complete.selectedOptions.selected}}-->
+<!--</p>-->
+<div fxLayoutAlign="center center">
+  <button mat-raised-button style="background-color: red; color: white" routerLink="addtodo">ADD TODO</button>
+</div>

@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <form class="example-form">
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [value]="userEmail"
+               (input) = "userEmail = $event.target.value">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password"[value]="userPass"
+               (input) = "userPass = $event.target.value" type="password">
+      </mat-form-field>
+    </div>
+  </form>
+  <div fxLayoutAlign="center center">
+    <button mat-raised-button style="background-color: red; color: white" (click)="register()">Register</button>
+  </div>
+</div>
